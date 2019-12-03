@@ -3,27 +3,31 @@
 
 x = [1, 2, 3]
 y = [8, 9, 10]
+# in terminal: python -> x = [1,2,3] -> dir(x) will tell you all available methods
+# ex: help(x.pop) or help(x.append), etc.
 
 # For the following, DO NOT USE AN ASSIGNMENT (=).
 
 # Change x so that it is [1, 2, 3, 4]
-# YOUR CODE HERE 
+x.append(4)
 print(x)
 
 # Using y, change x so that it is [1, 2, 3, 4, 8, 9, 10]
-# YOUR CODE HERE 
+x = x + y
 print(x)
 
 # Change x so that it is [1, 2, 3, 4, 9, 10]
-# YOUR CODE HERE 
+x.remove(8)
 print(x)
 
 # Change x so that it is [1, 2, 3, 4, 9, 99, 10]
-# YOUR CODE HERE 
+# at index 5, insert 99
+x.insert(5, 99)
 print(x)
 
 # Print the length of list x
-# YOUR CODE HERE 
+print(len(x))
 
 # Print all the values in x multiplied by 1000
-# YOUR CODE HERE
+new_array = [x * 1000 for x in x]
+print(new_array)
