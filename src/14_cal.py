@@ -22,3 +22,22 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+
+def cal():
+
+    args = len(sys.argv)
+    #args = (sys.argv)
+    print(args)
+    today = date.today()
+    print(today)
+
+
+if args == 1:
+    print(calendar.month(today.year, today.month))
+elif args == 2:
+    print(calendar.month(today.year, int(args[1])))
+else:
+    print(calendar.month(int(args[2], int(args[1]))))
+
+print(cal)
