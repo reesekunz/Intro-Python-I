@@ -39,7 +39,7 @@ print(y)
 # the user entered into list x.
 
 input_numbers = input("Enter comma-separated numbers: ").split(',')
-# integer_input_numbers = int(input_numbers)
+# input_numbers = int(input_numbers)
 # What do you need between the square brackets to make it work?
 y = [int(input_numbers)]
 for x in input_numbers:
