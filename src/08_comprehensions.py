@@ -11,15 +11,28 @@ for more info regarding list comprehensions.
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
 y = []
+for x in range(5):
+    y.append(x+1)
 
-print (y)
+print("#1", y)
+
+# OR
+
+y = [x+1 for x in range(5)]
+print("alternate #1", y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
 y = []
+for x in range(10):
+    y.append(x**3)  # ** means to the power of
+print("#2", y)
 
-print(y)
+# OR
+
+y = [x**3 for x in range(int(10))]
+print("alternate #2", y)
 
 # Write a list comprehension to produce the uppercase version of all the
 # elements in array a. Hint: "foo".upper() is "FOO".
@@ -27,15 +40,31 @@ print(y)
 a = ["foo", "bar", "baz"]
 
 y = []
+for x in a:
+    y.append(x.upper())
 
-print(y)
+print("#3", y)
+
+# OR
+
+y = [x.upper() for x in a]
+
+print("alternate #3", y)
 
 # Use a list comprehension to create a list containing only the _even_ elements
 # the user entered into list x.
 
-x = input("Enter comma-separated numbers: ").split(',')
+array_x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
 y = []
+for x in array_x:
+    if int(x) % 2 == 0:
+        y.append(x)
 
-print(y)
+print("#4", y)
+
+# OR
+
+y = [x for x in array_x if (int(x) % 2 == 0)]
+print("alternate #4", y)
